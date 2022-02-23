@@ -1,11 +1,9 @@
 package com.pijupiju.blaringsun;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -15,7 +13,6 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         constraintLayout.setOnClickListener(v -> vibe());
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     private void vibe() {
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         int hour = Calendar.getInstance().get(Calendar.HOUR);
